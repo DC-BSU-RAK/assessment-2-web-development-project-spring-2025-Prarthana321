@@ -1,0 +1,151 @@
+/* IMPORT GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Syne:wght@400..800&family=Tagesschrift&display=swap');
+
+/* GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: Merriweather; /* Default font */
+}
+
+/* BODY STYLE */
+body {
+    color: white;
+    height: 100vh;
+    background: url("background image.jpg") no-repeat center / cover; /* Background image */
+    padding: 2rem 5%; /* Padding around content */
+}
+
+/* MAIN CONTAINER */
+.container {
+    position: relative;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0); /* Transparent background */
+    border: 0.2rem solid #ca0bf5; /* Purple border */
+    border-radius: 1.8rem;
+    backdrop-filter: blur(1rem); /* Glassmorphism */
+    transform: scale(0); /* Hidden at first */
+    animation: zoom-in 1s ease forwards; /* Zoom-in animation */
+}
+
+/* ZOOM-IN ANIMATION */
+@keyframes zoom-in {
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* HEADER SECTION */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100; /* Layer on top */
+}
+
+/* LOGO STYLES */
+.logo {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.logo span {
+    text-shadow: 0 0 1rem #ca0bf5;
+    color: #ca0bf5;
+}
+
+/* NAVIGATION LINKS */
+.navbar a {
+    font-size: 1rem;
+    color: white;
+    font-weight: 500;
+    margin-left: 4rem;
+    border-bottom: 0.1rem solid transparent;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #ca0bf5;
+    border-bottom: 0.1rem solid #ca0bf5; /* Underline effect */
+}
+
+/* CONTACT SECTION WRAPPER */
+.contact {
+    margin: 2.5rem;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 5rem;
+    padding: 1.5rem 5% 0;
+    color: white;
+}
+
+/* CONTACT FORM STYLES */
+.contact form {
+    max-width: 70rem;
+    margin: 0.5rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* INPUT CONTAINER */
+.contact form .input-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* INPUTS AND TEXTAREA */
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    color: white;
+    background-color: black; /* Dark input background */
+    border-radius: 0.8rem;
+    border: 0.1rem solid #ca0bf5; /* Border matching theme */
+    box-shadow: 0 0 1rem #ca0bf5; /* Glowing effect */
+    margin: 0.7rem 0;
+    resize: none; /* Prevent textarea resizing */
+}
+
+/* SUBMIT BUTTON */
+.btn {
+    display: inline-block;
+    padding: 1rem 5%;
+    background-color: #ca0bf5;
+    border: 0.1rem solid #ca0bf5;
+    border-radius: 3rem;
+    box-shadow: 0 0 1rem #ca0bf5;
+    color: white;
+    text-decoration: none;
+    font-weight: 2rem;
+    transition: 0.5s;
+    margin: 1rem;
+}
+
+/* BUTTON HOVER EFFECT */
+.btn:hover {
+    background-color: transparent;
+    box-shadow: none;
+    color: white;
+    transform: scale(1.1); /* Slight zoom on hover */
+}

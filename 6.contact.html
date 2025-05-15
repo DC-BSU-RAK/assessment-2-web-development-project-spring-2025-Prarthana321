@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for responsive and character support -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page Title -->
+    <title>Contact</title>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="6.contactstyles.css">
+
+    <!-- Boxicons for icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+
+        <!-- HEADER SECTION -->
+        <header class="header">
+            <!-- Logo or brand name -->
+            <a href="#" class="logo"><span>Prarthana</span> Padmanabhan</a>
+
+            <!-- NAVIGATION MENU -->
+            <nav class="navbar">
+                <a href="1.home.html"><i class='bx bx-home'></i> Home</a>
+                <a href="2.aboutme.html"><i class='bx bx-user'></i> About Me</a>
+                <a href="3.skills.html"><i class='bx bx-objects-vertical-bottom'></i> Skills</a>
+                <a href="4.projects.html"><i class='bx bx-book'></i> Projects</a>
+                <a href="5.Pursuits.html"><i class='bx bx-wink-smile'></i> Pursuits</a>
+                <a href="6.contact.html" class="active"><i class='bx bx-message-alt-edit'></i> Contact</a>
+            </nav>
+        </header>
+
+        <!-- CONTACT FORM SECTION -->
+        <section class="contact" id="contact">
+
+            <!-- FORM ELEMENT -->
+            <form action="">
+                
+                <!-- NAME AND EMAIL FIELDS -->
+                <div class="input-box">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email" required>
+                </div>
+
+                <!-- PHONE AND SUBJECT FIELDS -->
+                <div class="input-box">
+                    <input type="number" placeholder="Phone Number" required>
+                    <input type="text" placeholder="Subject" required>
+                </div>
+
+                <!-- MESSAGE FIELD -->
+                <textarea cols="30" rows="5" placeholder="Your Message" required></textarea>
+
+                <!-- SUBMIT BUTTON -->
+                <input type="submit" value="Send Message" class="btn">
+            </form>
+        </section>
+
+    </div> <!-- End of container -->
+</body>
+</html>
