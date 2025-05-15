@@ -1,0 +1,157 @@
+/* IMPORT GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Syne:wght@400..800&family=Tagesschrift&display=swap');
+
+/* GLOBAL RESET AND BASE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: Merriweather; /* Base font for consistency */
+}
+
+/* BODY STYLES */
+body {
+    color: white;
+    height: 100vh;
+    background: url("background image.jpg") no-repeat center / cover; /* Fullscreen background */
+    padding: 2rem 5%; /* Padding around the body for spacing */
+}
+
+/* MAIN CONTAINER STYLES */
+.container {
+    position: relative;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0); /* Transparent background for glassmorphism */
+    border: 0.2rem solid #ca0bf5; /* Neon purple border */
+    border-radius: 1.8rem;
+    backdrop-filter: blur(1rem); /* Frosted glass effect */
+    transform: scale(0); /* Initially hidden for animation */
+    animation: zoom-in 1s ease forwards; /* Zoom in effect on load */
+}
+
+/* ZOOM IN ANIMATION */
+@keyframes zoom-in {
+    100% {
+        transform: scale(1); /* Final state: visible */
+    }
+}
+
+/* HEADER STYLES */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100; /* Ensures header stays above all other content */
+}
+
+/* LOGO STYLES */
+.logo {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.logo span {
+    text-shadow: 0 0 1rem #ca0bf5;
+    color: #ca0bf5; /* Highlighted first name */
+}
+
+/* NAVIGATION BAR STYLES */
+.navbar a {
+    font-size: 1rem;
+    color: white;
+    font-weight: 500;
+    margin-left: 4rem;
+    border-bottom: 0.1rem solid transparent;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #ca0bf5;
+    border-bottom: 0.1rem solid #ca0bf5; /* Underline effect on hover or active link */
+}
+
+/* ABOUT ME SECTION */
+.aboutme {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    gap: 1rem;
+    padding: 1.5rem 5% 0;
+    color: white;
+}
+
+/* TEXT SECTION HEADINGS */
+.aboutme-details h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.aboutme-details h1 span {
+    color: #ca0bf5;
+    text-shadow: 0 0 1rem #ca0bf5;
+}
+
+/* PARAGRAPH STYLE */
+.aboutme-details p {
+    margin: 1rem 0 2rem;
+    line-height: 2rem;
+}
+
+/* BUTTON STYLE */
+.btn {
+    display: inline-block;
+    padding: 1rem 5%;
+    background-color: #ca0bf5;
+    border: 0.1rem solid #ca0bf5;
+    border-radius: 3rem;
+    box-shadow: 0 0 1rem #ca0bf5;
+    color: white;
+    text-decoration: none;
+    font-weight: 2rem;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background-color: transparent;
+    box-shadow: none;
+    color: white;
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* IMAGE CONTAINER */
+.aboutme-img .img-box {
+    position: relative;
+    width: 28vw;
+    height: 28vw;
+    border: 0.1rem solid #ca0bf5;
+    border-radius: 50%; /* Circular image */
+    box-shadow: 0 0 1rem #ca0bf5;
+    overflow: hidden;
+}
+
+/* IMAGE STYLE */
+.aboutme-img .img-box img {
+    position: absolute;
+    top: 0rem;
+    display: block;
+    width: 100%;
+    object-fit: cover; /* Makes sure image fits without distortion */
+}
