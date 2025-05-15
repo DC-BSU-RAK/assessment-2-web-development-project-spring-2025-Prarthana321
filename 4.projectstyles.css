@@ -1,0 +1,148 @@
+/* IMPORTING GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Syne:wght@400..800&family=Tagesschrift&display=swap');
+
+/* GLOBAL STYLES RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: Merriweather; /* Global font */
+}
+
+/* BODY STYLING */
+body {
+    color: white;
+    height: 100vh;
+    background: url("background image.jpg") no-repeat center / cover; /* Fullscreen background image */
+    padding: 2rem 5%; /* Consistent padding for all sides */
+}
+
+/* MAIN CONTAINER STYLING */
+.container {
+    position: relative;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0); /* Transparent background for glass effect */
+    border: 0.2rem solid #ca0bf5; /* Purple neon border */
+    border-radius: 1.8rem;
+    backdrop-filter: blur(1rem); /* Frosted glass effect */
+    transform: scale(0); /* Hidden at first for animation */
+    animation: zoom-in 1s ease forwards;
+}
+
+/* ZOOM-IN ANIMATION */
+@keyframes zoom-in {
+    100% {
+        transform: scale(1); /* Final state to make container visible */
+    }
+}
+
+/* HEADER SECTION */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100; /* Ensures header remains above all */
+}
+
+/* LOGO STYLES */
+.logo {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.logo span {
+    text-shadow: 0 0 1rem #ca0bf5;
+    color: #ca0bf5; /* Emphasized name highlight */
+}
+
+/* NAVIGATION BAR */
+.navbar a {
+    font-size: 1rem;
+    color: white;
+    font-weight: 500;
+    margin-left: 4rem;
+    border-bottom: 0.1rem solid transparent;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #ca0bf5;
+    border-bottom: 0.1rem solid #ca0bf5; /* Underline effect */
+}
+
+/* PROJECTS WRAPPER */
+.projects-details {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* Allows responsiveness */
+    margin-top: 5rem;
+}
+
+/* EACH PROJECT CARD */
+.projects-details .projectbox {
+    position: relative;
+    height: 15rem;
+    width: 15rem;
+    background-color: #ca0bf5; /* Base purple background */
+    box-shadow: 0 0 1rem #ca0bf5; /* Neon glow */
+    margin: 0.8rem;
+    border-radius: 1rem;
+    transition: 0.3s ease-in-out;
+}
+
+.projectbox:hover {
+    transform: scale(1.1); /* Hover zoom effect */
+}
+
+/* PROJECT LOGO IMAGE BOX */
+.projectbox .logobox {
+    height: 9rem;
+    width: 9rem;
+    background-color: white;
+    margin: 1.5rem auto 0; /* Centered horizontally */
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem black;
+    display: flex;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+/* BUTTON STYLES */
+.btn {
+    display: inline-block;
+    padding: 0.5rem 5%;
+    background-color: white;
+    border: 0.1rem solid #3b0547; /* Deep purple border */
+    border-radius: 3rem;
+    box-shadow: 0 0 1rem black;
+    color: white;
+    text-decoration: none;
+    font-weight: 2rem;
+    transition: 0.5s;
+    margin: 1rem 3.2rem 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:hover {
+    background-color: antiquewhite;
+    box-shadow: none;
+    color: white;
+    transform: scale(1.1);
+}
