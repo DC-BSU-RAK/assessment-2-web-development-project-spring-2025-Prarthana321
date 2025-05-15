@@ -1,0 +1,178 @@
+/* IMPORTING GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Syne:wght@400..800&family=Tagesschrift&display=swap');
+
+/* GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: Merriweather; /* Base font for consistency */
+}
+
+/* BODY STYLES */
+body {
+    color: white;
+    height: 100vh;
+    background: url("background image.jpg") no-repeat center / cover; /* Fullscreen background image */
+    padding: 2rem 5%; /* Spacing around the body */
+}
+
+/* MAIN CONTENT CONTAINER */
+.container {
+    position: relative;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0); /* Transparent background */
+    border: 0.2rem solid #ca0bf5; /* Purple neon border */
+    border-radius: 1.8rem;
+    backdrop-filter: blur(1rem); /* Glassmorphism effect */
+    transform: scale(0); /* Hidden at start */
+    animation: zoom-in 1s ease forwards; /* Zoom effect on load */
+}
+
+/* ZOOM-IN ANIMATION */
+@keyframes zoom-in {
+    100% {
+        transform: scale(1); /* Final zoom-in state */
+    }
+}
+
+/* HEADER STYLES */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100; /* Stays on top of all content */
+}
+
+/* LOGO STYLES */
+.logo {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Zoom effect */
+}
+
+.logo span {
+    text-shadow: 0 0 1rem #ca0bf5;
+    color: #ca0bf5; /* Emphasized name */
+}
+
+/* NAVIGATION LINKS */
+.navbar a {
+    font-size: 1rem;
+    color: white;
+    font-weight: 500;
+    margin-left: 4rem;
+    border-bottom: 0.1rem solid transparent;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #ca0bf5;
+    border-bottom: 0.1rem solid #ca0bf5; /* Underline active/hovered link */
+}
+
+/* PURSUITS SECTION WRAPPER */
+.pursuits {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 5rem; /* Space between image and text */
+    padding: 1.5rem 5% 0;
+    color: white;
+}
+
+/* PURSUITS HEADING */
+.pursuits-details h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.pursuits-details h1 span {
+    color: #ca0bf5;
+    text-shadow: 0 0 1rem #ca0bf5;
+}
+
+/* ANIMATED TEXT TITLES */
+.pursuits-details h3 {
+    display: inline-block;
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+.pursuits-details h3 span {
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: 0.07rem #ca0bf5; /* Outlined text */
+    animation: display-text 16s linear infinite;
+    animation-delay: calc(-4s * var(--i)); /* Staggered animation */
+}
+
+/* HIDE OTHER TITLES EXCEPT CURRENT */
+@keyframes display-text {
+    25%, 100% {
+        display: none;
+    }
+}
+
+/* TYPING EFFECT ON TITLES */
+.pursuits-details h3 span::before {
+    content: attr(data-text);
+    position: absolute;
+    width: 0;
+    border-right: 0.2rem solid #ca0bf5;
+    color: #ca0bf5;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: fill-text 4s linear infinite;
+}
+
+@keyframes fill-text {
+    10%, 100% {
+        width: 0;
+    }
+    70%, 90% {
+        width: 100%;
+    }
+}
+
+/* PARAGRAPH STYLING */
+.pursuits-details p {
+    margin: 3rem 0 4rem;
+    line-height: 2rem;
+}
+
+/* IMAGE CONTAINER */
+.pursuits-img .img-box {
+    position: relative;
+    width: 28vw;
+    height: 28vw;
+    border: 0.1rem solid #ca0bf5;
+    border-radius: 50%; /* Makes image circular */
+    box-shadow: 0 0 1rem #ca0bf5;
+    overflow: hidden;
+}
+
+/* IMAGE INSIDE CONTAINER */
+.pursuits-img .img-box img {
+    position: absolute;
+    top: 0rem;
+    display: block;
+    width: 100%;
+    object-fit: cover; /* Maintains aspect ratio */
+}
